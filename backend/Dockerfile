@@ -5,13 +5,13 @@ FROM python:3.9 AS backend
 WORKDIR /app/backend
 
 # Copiar las dependencias al directorio del contenedor
-COPY ./backend/requirements.txt .
+COPY requirements.txt .
 
-# instalar las dependencias en el contenedor
+# Instalar las dependencias 
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copia código fuente del backend
-COPY ./backend/ .
+# Copiar codigo fuente
+COPY . .
 
 #poner en escucha el puerto 5000 para el backend
 EXPOSE 5000
