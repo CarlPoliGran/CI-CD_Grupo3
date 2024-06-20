@@ -5,7 +5,7 @@ pipeline {
         string(name: 'contenedor', defaultValue: 'frontendContable', description: 'Nombre del contenedor')
         string(name: 'puertoHost', defaultValue: '80', description: 'Puerto del host')
         string(name: 'puertoContenedor', defaultValue: '80', description: 'Puerto del contenedor')
-        string(name: 'red', defaultValue: 'integracioncontinua_red-poli', description: 'Nombre de la red Docker')
+        string(name: 'red', defaultValue: 'ci-cd_grupo3_red-poli', description: 'Nombre de la red Docker')
     }
 
     stages {
