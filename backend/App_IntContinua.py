@@ -167,6 +167,7 @@ user_consumer_thread = threading.Thread(target=start_consuming, args=('user_queu
 partida_consumer_thread = threading.Thread(target=start_consuming, args=('partida_queue',))
 user_consumer_thread.start()
 partida_consumer_thread.start()
+
     
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
