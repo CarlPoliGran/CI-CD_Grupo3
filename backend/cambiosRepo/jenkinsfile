@@ -84,6 +84,14 @@ pipeline {
                 sh "docker run -d -p ${params.puertoHost}:${params.puertoContenedor} --network ${params.red} --name ${params.contenedor} integracioncontinua-myfacturacion"
             }
         }
+        stage('Esperar-backend-disponible') {
+            steps {
+                script {
+                    echo "Esperar 20 segundos"
+                    sleep(time: 20, unit: 'SECONDS')
+                }
+            }
+        }
         stage('Test Backend') {
             steps {
                 script {
